@@ -1,4 +1,25 @@
 <resources>
-    <string name="app_name">Lab1UI</string>
+    <string name="app_name">Laboratorio 1 CompuMovil</string>
     <string name="action_settings">Settings</string>
+
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="femenino">Femenino</string>
+    <string name="masculino">Masculino</string>
+    <string name="pais">Pais</string>
+    <string name="telefono">Telefono</string>
+    <string name="direccion">Direccion</string>
+    <string name="email">E-mail</string>
+    <string name="favorito">Favorito</string>
+    <string name="mostrar">Mostrar</string>
+
+    <string name="datos">Aqui se mostraran los datos Ingresados</string>
+
+    <string-array name="planets_array">
+        <item>Deportes</item>
+        <item>Aprender idiomas nuevos</item>
+        <item>Tocar instrumentos musicales</item>
+        <item>Jugar video juegos</item>
+        <item>Leer</item>
+    </string-array>
 </resources>

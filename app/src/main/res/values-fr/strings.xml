@@ -15,4 +15,16 @@
     <string name="mostrar">Show</string>
 
     <string name="datos">Les données saisies ici seront affichées</string>
+
+    <string-array name="hobbies">
+        <item>Deportes</item>
+        <item>Aprender idiomas nuevos</item>
+        <item>Tocar instrumentos musicales</item>
+        <item>Jugar video juegos</item>
+        <item>Leer</item>
+    </string-array>
+
+    <string-array name="paises">
+        <item name="Colombia"/>
+    </string-array>
 </resources>

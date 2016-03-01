@@ -20,10 +20,13 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="3">
 
 
         <RelativeLayout
@@ -35,30 +38,47 @@
             android:orientation="vertical">
 
 
-            <EditText
-                android:id="@+id/Nombre"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_nombre"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="@string/nombre"
-                android:inputType="textPersonName" />
+                android:layout_height="wrap_content">
 
-            <EditText
-                android:id="@+id/Apellido"
+                <EditText
+                    android:id="@+id/Nombre"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/nombre"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_apellido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Nombre"
-                android:ems="10"
-                android:hint="@string/apellido"
-                android:inputType="textPersonName" />
+                android:layout_below="@+id/input_nombre">
+
+                <EditText
+                    android:id="@+id/Apellido"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/input_nombre"
+                    android:ems="10"
+                    android:hint="@string/apellido"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
 
             <RadioGroup
                 android:id="@+id/Sexo"
-                android:layout_width="372dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/Apellido"
+                android:layout_below="@id/input_apellido"
                 android:orientation="horizontal"
-                android:checkedButton="@+id/Masculino">
+                android:checkedButton="@+id/Masculino"
+                android:layout_centerHorizontal="true"
+                style="@style/TextView">
 
                 <RadioButton
                     android:id="@+id/Masculino"
@@ -77,51 +97,93 @@
             <DatePicker
                 android:id="@+id/fecha"
                 android:layout_width="wrap_content"
-                android:layout_height="70dp"
+                android:layout_height="100dp"
                 android:layout_below="@id/Sexo"
                 android:calendarViewShown="false"
+                android:layout_centerHorizontal="true"
                 android:datePickerMode="spinner" />
 
-            <EditText
-                android:id="@+id/pais"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_pais"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/fecha"
-                android:hint="@string/pais" />
+                android:layout_below="@id/fecha">
 
-            <EditText
-                android:id="@+id/telefono"
+                <AutoCompleteTextView
+                    android:id="@+id/pais"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fecha"
+                    android:hint="@string/pais" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_telefono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/pais"
-                android:ems="10"
-                android:hint="@string/telefono"
-                android:inputType="phone" />
+                android:layout_below="@id/input_pais">
 
-            <EditText
-                android:id="@+id/direccion"
+                <EditText
+                    android:id="@+id/telefono"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/telefono"
+                    android:inputType="phone" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_direccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/telefono"
-                android:hint="@string/direccion" />
+                android:layout_below="@id/input_telefono">
 
-            <EditText
-                android:id="@+id/email"
+                <EditText
+                    android:id="@+id/direccion"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/direccion" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/direccion"
-                android:ems="10"
-                android:hint="@string/email"
-                android:inputType="textEmailAddress" />
+                android:layout_below="@id/input_direccion">
 
+                <EditText
+                    android:id="@+id/email"
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/direccion"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                style="@style/TextView"
+                android:id="@+id/input_hobbies"
+                android:text="@string/hobby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/input_email">
+
+            </TextView>
             <Spinner
                 android:id="@+id/hobbies"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/email" />
+                android:layout_below="@id/input_hobbies" />
 
             <CheckBox
                 android:id="@+id/favorito"
+                style="@style/TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/hobbies"
@@ -132,9 +194,9 @@
     </ScrollView>
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3">
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -151,11 +213,12 @@
                 android:text="@string/mostrar"/>
 
             <TextView
+                style="@style/TextView"
                 android:id="@+id/datos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/datos"/>
         </LinearLayout>
     </ScrollView>
-
+    </LinearLayout>
 </LinearLayout>

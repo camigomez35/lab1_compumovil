@@ -5,7 +5,7 @@ Actividad:
 - Desarrolle una interfaz gráfica (archivo activity_mail.xml en el directorio layouts) dividida en dos secciones (cada sección será un layout). Utilice un LinearLayout en el que se incluyan ambas secciones y utilice la propiedad android:weight para que la primera sección ocupe ¾ de la pantalla, mientras la segunda ¼ (Es decir, utilice el número 3 para la primera sección y el número 1 para la segunda, recuerde dejar la propiedad android:height en 0dp para que se le dé prioridad a la propiedad weight)
 - Desarrolle una interfaz adicional para cuando la aplicación esté en modo landscape. En este caso la interfaz se debe reorganizar de forma tal que las dos secciones se ubiquen en forma horizontal.
 
-Primera sección
+-Primera sección
 Se desea agregar un nuevo contacto, realice un formulario para con los siguientes campos: 
 Nombres (EditText ), debe usar un teclado normal y con mayúscula inicial y no debe brindar sugerencias.
 Apellidos (EditText), debe usar un teclado normal y con mayúscula inicial y no debe brindar sugerencias
@@ -21,7 +21,7 @@ Los componentes anteriores deben estar organizados usando un relativelayout, la 
 En el teclado debe aparecer siguiente en vez de enter, cuando se necesario agregar más información
 
 
-Segunda sección
+-Segunda sección
 Se desea capturar toda la información y escribirla en un campo de texto.
 TextView con scroll en el que se mostrará la información ingresada cuando se presione el botón “Mostrar”.
 Botón “Mostrar”,
